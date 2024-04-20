@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>413705168066-a8j54ieq3ir74d7m7ojs5dsg3ppd4e15.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.413705168066-a8j54ieq3ir74d7m7ojs5dsg3ppd4e15</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>413705168066-hjrnikl476fb9baei10k36c523p81vih.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCZx8B3sOgilvxvOwtjfi3Zy0HiU3SikvM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>413705168066</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.boha.resumeOptimizer</string>
+	<key>PROJECT_ID</key>
+	<string>sgela-ai-33</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sgela-ai-33.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:413705168066:ios:50d8d665fe706e8753075b</string>
+</dict>
+</plist>

@@ -1,0 +1,170 @@
+{
+  "project_info": {
+    "project_number": "413705168066",
+    "project_id": "sgela-ai-33",
+    "storage_bucket": "sgela-ai-33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413705168066:android:eaccf7184f1b483253075b",
+        "android_client_info": {
+          "package_name": "com.boha.edu_chatbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413705168066-hjrnikl476fb9baei10k36c523p81vih.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.boha.edu_chatbot",
+            "certificate_hash": "a1c6d044035fb9a0deea9c24a7c7f3dd85ed6950"
+          }
+        },
+        {
+          "client_id": "413705168066-52dr9s8la4qg92797bmqkkt10tb5f8ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjVYccOuUD9ucbwbkYTRHDHymoVTNBQsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413705168066-52dr9s8la4qg92797bmqkkt10tb5f8ri.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "413705168066-5g5gla5lj7bi40onrgiupka2qtlchb59.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.boha.chatbotSponsorApp.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413705168066:android:c58aafae6bfd5b8553075b",
+        "android_client_info": {
+          "package_name": "com.boha.resume_optimizer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413705168066-52dr9s8la4qg92797bmqkkt10tb5f8ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjVYccOuUD9ucbwbkYTRHDHymoVTNBQsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413705168066-52dr9s8la4qg92797bmqkkt10tb5f8ri.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "413705168066-5g5gla5lj7bi40onrgiupka2qtlchb59.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.boha.chatbotSponsorApp.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413705168066:android:1e1d6b669d8d14dd53075b",
+        "android_client_info": {
+          "package_name": "com.boha.sgela_sponsor_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413705168066-po9l44qgjp7uocel6j5ikhmf85a8a817.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.boha.sgela_sponsor_app",
+            "certificate_hash": "a1c6d044035fb9a0deea9c24a7c7f3dd85ed6950"
+          }
+        },
+        {
+          "client_id": "413705168066-52dr9s8la4qg92797bmqkkt10tb5f8ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjVYccOuUD9ucbwbkYTRHDHymoVTNBQsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413705168066-52dr9s8la4qg92797bmqkkt10tb5f8ri.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "413705168066-5g5gla5lj7bi40onrgiupka2qtlchb59.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.boha.chatbotSponsorApp.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413705168066:android:24b5de8a5b1bb84353075b",
+        "android_client_info": {
+          "package_name": "com.example.dashclicker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413705168066-52dr9s8la4qg92797bmqkkt10tb5f8ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjVYccOuUD9ucbwbkYTRHDHymoVTNBQsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413705168066-52dr9s8la4qg92797bmqkkt10tb5f8ri.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "413705168066-5g5gla5lj7bi40onrgiupka2qtlchb59.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.boha.chatbotSponsorApp.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
