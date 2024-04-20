@@ -32,6 +32,12 @@ curl -X POST "https://api.groq.com/openai/v1/chat/completions" \
   final List<GroqRequest> _requestHistory = [];
   final List<GroqChatResponse> _responseHistory = [];
 
+  StreamController<List<GroqChatResponse> > streamController = StreamController.broadcast();
+  Stream<List<GroqChatResponse> >  get chatStream => streamController.stream;
+
+  StreamController<dynamic> errorController = StreamController.broadcast();
+  Stream<dynamic>  get errorStream => errorController.stream;
+
   Future sendChatMessages(
       {required List<GroqRequest> messages,
       required String model,
@@ -49,7 +55,7 @@ curl -X POST "https://api.groq.com/openai/v1/chat/completions" \
     pp('$mm sending post request: $url');
 
     if (titleForContext != null) {
-      messages.insertAll(0, getMessageContext(model, titleForContext));
+      messages.insertAll(0, getMessageContext(model, titleForContext, []));
     }
     Map<String, dynamic> body = {
       'messages': jsonEncode(messages),
@@ -121,14 +127,7 @@ curl -X POST "https://api.groq.com/openai/v1/chat/completions" \
         headers: headers,
       );
 
-      // pp('$mm listening to chat stream .....');
-      // responseStream.listen((data) {
-      //   pp('\n\n$mm stream has delivered a response that will be put on chatStream: 🍎$data 🍎');
-      //   streamController.sink.add(data);
-      // }, onError: (error) {
-      //   errorController.sink.add(error);
-      //   // throw Exception(error);
-      // });
+
       pp('$mm responses ..... ${allResponses.length}');
       return allResponses;
     } catch (e, s) {
@@ -140,21 +139,24 @@ curl -X POST "https://api.groq.com/openai/v1/chat/completions" \
     }
   }
 
-  StreamController<List<GroqChatResponse> > streamController = StreamController.broadcast();
-  Stream<List<GroqChatResponse> >  get chatStream => streamController.stream;
+  List<GroqRequest> getMessageContext(String model, String profile, List<String> skills) {
+    var sb = StringBuffer();
 
-  StreamController<dynamic> errorController = StreamController.broadcast();
-  Stream<dynamic>  get errorStream => errorController.stream;
-
-  List<GroqRequest> getMessageContext(String model, String title) {
+    sb.write('You are a Resume Assistant. You are going to consider the following skills to respond:');
+    for (var skill in skills) {
+      sb.write(' $skill, ');
+    }
+    sb.write('\n\n ');
+    sb.write('The example resume profile: $profile');
+    //
     List<GroqRequest> messages = [
       GroqRequest(
           role: 'system',
           content:
-              'You are a helpful Tutor and education assistant and you respond in markdown format'),
+             sb.toString()),
       GroqRequest(
           role: 'user',
-          content: 'Help me prepare for exams and texts for: $title'),
+          content: 'Help me prepare a resume profile based on the profile I provided. The profile is for this job: $profile'),
     ];
 
     return messages;
@@ -162,5 +164,12 @@ curl -X POST "https://api.groq.com/openai/v1/chat/completions" \
   static const modelStringLlama2 = 'llama2-70b-4096';
   static const modelStringMixtral = 'mixtral-8x7b-32768';
   static const modelStringGemma = 'gemma-7b-it';
+
+  List<String> mySkills = [
+    'Google Cloud Platform',
+    'AWS',
+    'AI Chatbot Developing using OpenAI, Gemini, Claude, Groq and Mistral',
+    'Java with Springboot',
+  ];
 }
 

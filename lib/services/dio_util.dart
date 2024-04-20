@@ -1,9 +1,7 @@
 import 'dart:async';
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:http_parser/http_parser.dart';
 
 import '../models/groq/groq_chat_response.dart';
 import '../util/functions.dart';
@@ -16,7 +14,6 @@ class DioUtil {
 
   static const urlPrefix =
       'https://generativelanguage.googleapis.com/v1beta/models/';
-
 
   Future<Response> sendGetRequestWithHeaders(
       {required String path,
@@ -43,8 +40,8 @@ class DioUtil {
 
   Future<Response> sendGetRequest(
       {required String path, required Map<String, dynamic> params}) async {
-    pp('$mm Dio starting ...: 🍎🍎🍎 path: $path 🍎 '
-        '\n 🍎params: $params 🍎');
+    pp('$mm Dio sendGetRequest ...: 🍎🍎🍎 path: $path 🍎 '
+        '\n 🍎params: $params 🍎\n');
     try {
       Response response;
       response = await dio
@@ -144,7 +141,7 @@ class DioUtil {
       throw Exception('$mm 👿👿Failed to send POST request: $e - $s');
     }
   }
-  /*
+/*
     Stream<List<GroqChatResponse> > sendPostRequestReturnStream({
     required String url,
     required dynamic body,

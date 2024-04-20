@@ -3,84 +3,79 @@ import 'dart:core';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'experience.dart';
-import 'job.dart';
-import 'job_board.dart';
 
 part 'resume.g.dart';
 
 @JsonSerializable()
 class Resume {
-  String? id;
+  String? resumeId;
   String? name, title, location, text;
   String? profile;
   String? summary;
-  String? date;
+  String? date, downloadUrl;
   List<Experience> experiences = [];
   List<Certification> certifications = [];
-  List<Skill> skills = [];
+  int pages;
 
+  Resume(this.resumeId, this.text, this.profile, this.summary, this.date,
+      this.experiences, this.certifications, this.downloadUrl, this.pages);
 
-  Resume(this.id, this.text, this.profile, this.summary,
-      this.date,this.experiences, this.certifications);
-
-  factory Resume.fromJson(Map<String, dynamic> json) =>
-      _$ResumeFromJson(json);
+  factory Resume.fromJson(Map<String, dynamic> json) => _$ResumeFromJson(json);
 
   Map<String, dynamic> toJson() => _$ResumeToJson(this);
-
 }
 
 @JsonSerializable()
 class Certification {
-  String? id;
+  String? certificationId;
   String? title;
   String? provider;
   String? expiryDate;
   String? validStart, validEnd, description;
 
-  Certification(this.id, this.title, this.provider, this.expiryDate,
-      this.validStart, this.validEnd, this.description);
+  Certification(this.certificationId, this.title, this.provider,
+      this.expiryDate, this.validStart, this.validEnd, this.description);
+
   factory Certification.fromJson(Map<String, dynamic> json) =>
       _$CertificationFromJson(json);
 
   Map<String, dynamic> toJson() => _$CertificationToJson(this);
-
 }
 
 @JsonSerializable()
 class Skill {
-  String? id;
+  int? id;
   String? title;
-  int? yearsExperience;
-  int? skillLevel;
-  bool? current;
 
+  Skill(
+    this.id,
+    this.title,
+  );
 
-  Skill(this.id, this.title, this.yearsExperience, this.skillLevel, this.current);
-
-  factory Skill.fromJson(Map<String, dynamic> json) =>
-      _$SkillFromJson(json);
+  factory Skill.fromJson(Map<String, dynamic> json) => _$SkillFromJson(json);
 
   Map<String, dynamic> toJson() => _$SkillToJson(this);
-
 }
 
 @JsonSerializable()
-class User {
-  String? id;
-  String? name, email, date, password, updated;
-  bool? active;
+class UserSkill {
+  String? userSkillId;
+  String? firebaseUserId;
+  int? yearsExperience;
+  int? skillLevel;
+  bool? current;
+  Skill? skill;
 
+  UserSkill(
+      {required this.userSkillId,
+      required this.firebaseUserId,
+      required this.skill,
+      required this.yearsExperience,
+      required this.skillLevel,
+      required this.current});
 
-  User(this.id, this.name, this.email, this.date, this.password, this.updated,
-      this.active);
+  factory UserSkill.fromJson(Map<String, dynamic> json) =>
+      _$UserSkillFromJson(json);
 
-  factory User.fromJson(Map<String, dynamic> json) =>
-      _$UserFromJson(json);
-
-  Map<String, dynamic> toJson() => _$UserToJson(this);
-
+  Map<String, dynamic> toJson() => _$UserSkillToJson(this);
 }
-
-
-

@@ -1,3 +1,5 @@
+import 'package:universal_io/io.dart';
+
 import '../models/experience.dart';
 import '../models/resume.dart';
 
@@ -20,4 +22,9 @@ class ResumeService {
 
     return mList;
   }
+
+  Future<File?> downloadPdf(String url) async {
+
+  }
+
 }
